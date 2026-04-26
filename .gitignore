@@ -1,4 +1,4 @@
-# Unity generated folders (DO NOT COMMIT)
+# Unity generated folders
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -7,12 +7,32 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 
-# Visual Studio / IDE junk
+# MemoryCaptures
+[Mm]emoryCaptures/
+
+# Asset meta data (IMPORTANT: keep meta files!)
+!*.meta
+
+# IDE
 .vs/
 *.csproj
 *.sln
 *.user
 *.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Unity cache
+*.apk
+*.unitypackage
+
+# Crash reports
+sysinfo.txt
 
 # Logs
 *.log
