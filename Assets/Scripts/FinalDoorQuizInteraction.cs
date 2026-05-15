@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class DoorQuizInteraction : MonoBehaviour
+public class FinalDoorQuizInteraction : MonoBehaviour
 {
     [Header("UI")]
     public GameObject interactText;
@@ -27,32 +27,30 @@ public class DoorQuizInteraction : MonoBehaviour
     private bool quizOpened = false;
     private bool doorOpened = false;
 
+    private Quaternion closedRotation;
     private Quaternion openRotation;
 
     void Start()
     {
-        // Hide UI at start
         interactText.SetActive(false);
         questionPanel.SetActive(false);
 
-        // Clear texts
         messageText.text = "";
-        answerInput.text = "";
 
-        // Door target rotation
+        closedRotation = door.rotation;
+
         openRotation = Quaternion.Euler(
             door.eulerAngles.x,
             door.eulerAngles.y + openAngle,
             door.eulerAngles.z
         );
 
-        // Set question
         questionText.text = question;
     }
 
     void Update()
     {
-        // Open question panel with E
+        // Show question panel
         if (playerNear && !quizOpened && !doorOpened)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -76,50 +74,40 @@ public class DoorQuizInteraction : MonoBehaviour
     {
         quizOpened = true;
 
-        // Hide interaction text
         interactText.SetActive(false);
-
-        // Show question panel
         questionPanel.SetActive(true);
 
-        // Clear old data
         answerInput.text = "";
         messageText.text = "";
 
-        // Unlock cursor
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        // Focus input field
         answerInput.ActivateInputField();
     }
 
     public void CheckAnswer()
     {
-        string answer = answerInput.text.Trim().ToLower();
+        string answer = answerInput.text.Trim();
 
-        // Correct answer
-        if (answer == correctAnswer.ToLower())
+        // CORRECT ANSWER
+        if (answer == correctAnswer)
         {
             messageText.text = "Correct! Door Opened.";
 
-            // Open door
             doorOpened = true;
+            FindFirstObjectByType<FinalDoorWin>().WinGame();
 
-            // Close panel after 2 sec
-            Invoke(nameof(CloseQuizPanel), 2f);
+            Invoke("CloseQuizPanel", 2f);
         }
         else
         {
             messageText.text = "Wrong Answer. Try Again.";
 
-            // Clear input
             answerInput.text = "";
 
-            // Focus input again
             answerInput.ActivateInputField();
 
-            // Remove wrong message after 2 sec
             CancelInvoke(nameof(ClearMessage));
             Invoke(nameof(ClearMessage), 2f);
         }
@@ -135,16 +123,13 @@ public class DoorQuizInteraction : MonoBehaviour
 
     void CloseQuizPanel()
     {
-        // Hide panel
         questionPanel.SetActive(false);
 
-        // Clear everything
         messageText.text = "";
         answerInput.text = "";
 
         quizOpened = false;
 
-        // Lock cursor again
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

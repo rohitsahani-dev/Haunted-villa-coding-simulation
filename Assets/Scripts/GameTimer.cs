@@ -15,13 +15,23 @@ public class GameTimer : MonoBehaviour
 
     private bool timerRunning = true;
 
+    // NEW
+    private bool gameWon = false;
+
     void Start()
     {
         gameOverPanel.SetActive(false);
+
+        UpdateTimerDisplay();
     }
 
     void Update()
     {
+        // Stop everything if game won
+        if (gameWon)
+            return;
+
+        // Stop if timer paused
         if (!timerRunning)
             return;
 
@@ -30,6 +40,7 @@ public class GameTimer : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining = 0;
+
             timerRunning = false;
 
             GameOver();
@@ -53,17 +64,28 @@ public class GameTimer : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        InvokeRealtimeRestart();
+        RestartGame();
     }
 
-    async void InvokeRealtimeRestart()
+    async void RestartGame()
     {
+        // Wait 3 seconds in real time
         await System.Threading.Tasks.Task.Delay(3000);
 
+        // Reset time scale
         Time.timeScale = 1f;
 
+        // Reload scene
         SceneManager.LoadScene(
             SceneManager.GetActiveScene().buildIndex
         );
+    }
+
+    // CALLED WHEN PLAYER WINS
+    public void StopTimer()
+    {
+        gameWon = true;
+
+        timerRunning = false;
     }
 }

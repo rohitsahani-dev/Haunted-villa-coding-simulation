@@ -702,6 +702,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 216.50436, y: 68.79648, z: 2.0000267}
   m_Center: {x: -12.252173, y: 34.14824, z: 0.00003178553}
+--- !u!64 &130583366
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130583358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6523137528959636433, guid: 555a10da988bd1e468bfbfce660f15f6, type: 3}
 --- !u!1 &140468161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 306746768}
+      - m_Target: {fileID: 1938667558}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -1491,19 +1513,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 752165030}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &209386410 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 209386409}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &209386411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -1773,6 +1787,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5837292208722104727, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1509598730}
+    - targetCorrespondingSourceObject: {fileID: -7798716912833157204, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1510038192}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
 --- !u!1 &247680426
 GameObject:
@@ -2665,19 +2682,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1938667558}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &306746768 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 306746767}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &306746769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -2826,6 +2835,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317441860}
   m_CullTransparentMesh: 1
+--- !u!1 &320068970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320068973}
+  - component: {fileID: 320068972}
+  - component: {fileID: 320068971}
+  m_Layer: 5
+  m_Name: WinText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &320068971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320068970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: YOU ESCAPED
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278451968
+  m_fontColor: {r: 0, g: 1, b: 0.010478258, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &320068972
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320068970}
+  m_CullTransparentMesh: 1
+--- !u!224 &320068973
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320068970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1187898859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &332812396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,19 +3805,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 625901418}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &470357218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 470357217}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &470357219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -3904,7 +4041,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620250083}
+      - m_Target: {fileID: 1620250086}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -5262,19 +5399,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1060917814}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &617375640 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 617375639}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &617375641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -5285,6 +5414,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1362670684717991145, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
   m_PrefabInstance: {fileID: 617375639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &625901416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 470357217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &625901418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625901416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 58768935}
+  questionPanel: {fileID: 1451548270}
+  questionText: {fileID: 994455863}
+  answerInput: {fileID: 162278683}
+  messageText: {fileID: 1461157911}
+  door: {fileID: 470357219}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    print(len("Python"))'
+  correctAnswer: 6
 --- !u!1 &641502120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4755414750394472456, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
@@ -6333,6 +6491,33 @@ RectTransform:
   m_AnchoredPosition: {x: -6.4395, y: 21}
   m_SizeDelta: {x: 147.1209, y: 26.8912}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &752165028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 209386409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &752165030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752165028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 49578664}
+  questionPanel: {fileID: 987275149}
+  questionText: {fileID: 2070545125}
+  answerInput: {fileID: 512293256}
+  messageText: {fileID: 278504322}
+  door: {fileID: 209386411}
+  openAngle: -120
+  openSpeed: 2
+  question: "What is the output of:\r\nfor i in range(3):\r\n    print(i)"
+  correctAnswer: 0 1 2
 --- !u!1 &768342515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6988350819622419070, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
@@ -6555,8 +6740,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261795790}
-        m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
+      - m_Target: {fileID: 1325429730}
+        m_TargetAssemblyTypeName: FinalDoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:
@@ -7013,6 +7198,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &920930482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 1620250082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &940746496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8149,17 +8339,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &1046363409 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 7798848831052003336}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1051262297
 GameObject:
   m_ObjectHideFlags: 0
@@ -8308,6 +8487,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1060917812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 617375639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1060917814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060917812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1018814266}
+  questionPanel: {fileID: 2112734695}
+  questionText: {fileID: 657922991}
+  answerInput: {fileID: 1069301677}
+  messageText: {fileID: 1920194144}
+  door: {fileID: 617375641}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    print(10 * 5)'
+  correctAnswer: 50
 --- !u!1001 &1064099521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8402,6 +8610,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3106225529408920933, guid: 555a10da988bd1e468bfbfce660f15f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 130583362}
+    - targetCorrespondingSourceObject: {fileID: 3106225529408920933, guid: 555a10da988bd1e468bfbfce660f15f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 130583366}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 555a10da988bd1e468bfbfce660f15f6, type: 3}
 --- !u!1 &1069301676
 GameObject:
@@ -8843,6 +9054,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1130701447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 7798848831052003336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135951892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3967868518981025738, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
@@ -9086,6 +9302,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1187898858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187898859}
+  - component: {fileID: 1187898861}
+  - component: {fileID: 1187898860}
+  m_Layer: 5
+  m_Name: WinPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1187898859
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187898858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 320068973}
+  m_Father: {fileID: 1831243708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1187898860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187898858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1187898861
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187898858}
+  m_CullTransparentMesh: 1
 --- !u!1 &1195248918
 GameObject:
   m_ObjectHideFlags: 0
@@ -9528,19 +9820,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699272012}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &1224171583 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 1224171582}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1224171584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -9898,7 +10182,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224171583}
+      - m_Target: {fileID: 1699272012}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -9948,17 +10232,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259922236}
   m_CullTransparentMesh: 1
---- !u!114 &1261795790 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 1325429728}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1261795792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1362670684717991145, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -10016,6 +10289,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1278895408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278895410}
+  - component: {fileID: 1278895409}
+  m_Layer: 0
+  m_Name: FinalDoorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1278895409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278895408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7dc82de11bfd1478effc9dc1daf916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPanel: {fileID: 1187898858}
+  winText: {fileID: 320068971}
+  finalDoor: {fileID: 1410934062}
+  openAngle: -120
+  openSpeed: 2
+--- !u!4 &1278895410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278895408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 176.66977, y: 303.29724, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312102823
 GameObject:
   m_ObjectHideFlags: 0
@@ -10166,8 +10488,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1325429730}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+--- !u!1 &1325429729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 1325429728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1325429730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325429729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460b80161a73db6438ba2e2a0d5e3aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 663094728}
+  questionPanel: {fileID: 1366760087}
+  questionText: {fileID: 1028044459}
+  answerInput: {fileID: 1556664863}
+  messageText: {fileID: 1195248920}
+  door: {fileID: 1410934062}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    x = 5
+
+    x += 3
+
+    print(x)'
+  correctAnswer: 8
 --- !u!1 &1340539687
 GameObject:
   m_ObjectHideFlags: 0
@@ -10545,7 +10903,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 209386410}
+      - m_Target: {fileID: 752165030}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -11213,7 +11571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 617375640}
+      - m_Target: {fileID: 1060917814}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -11822,6 +12180,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5787936243106731984, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
+--- !u!1 &1510038188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7798716912833157204, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
+  m_PrefabInstance: {fileID: 244995859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1510038192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510038188}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5952171919155459599, guid: ba089bc6d442bb646b74a48d644aff2f, type: 3}
 --- !u!1 &1516459570
 GameObject:
   m_ObjectHideFlags: 0
@@ -11905,7 +12290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1046363409}
+      - m_Target: {fileID: 4089299311930171}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -14018,11 +14403,15 @@ PrefabInstance:
     - {fileID: -8683771030930995636, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
     - {fileID: 3223791919442704282, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
     - {fileID: 8251797472779768648, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
+    - {fileID: 6077480969744486541, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1099174559}
+    - targetCorrespondingSourceObject: {fileID: -5004939632983645781, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705702162}
     - targetCorrespondingSourceObject: {fileID: -4373362315085645885, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 259294876}
@@ -14594,19 +14983,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620250086}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
---- !u!114 &1620250083 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 234902383898908148, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
-  m_PrefabInstance: {fileID: 1620250082}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1620250084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -14617,6 +14998,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1362670684717991145, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
   m_PrefabInstance: {fileID: 1620250082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620250086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920930482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1030563770}
+  questionPanel: {fileID: 203637661}
+  questionText: {fileID: 332812397}
+  answerInput: {fileID: 1249954612}
+  messageText: {fileID: 1469350642}
+  door: {fileID: 1620250084}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    x = 4
+
+    print(x)'
+  correctAnswer: 4
 --- !u!1 &1632609820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4137718919234417725, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
@@ -14917,6 +15324,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1699272010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 1224171582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1699272012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699272010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1461019211}
+  questionPanel: {fileID: 215409266}
+  questionText: {fileID: 1978509187}
+  answerInput: {fileID: 566480224}
+  messageText: {fileID: 693362060}
+  door: {fileID: 1224171584}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    print(20 // 3)'
+  correctAnswer: 6
+--- !u!1 &1705702158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5004939632983645781, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
+  m_PrefabInstance: {fileID: 1548391579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1705702162
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705702158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 424414273051829088, guid: 5e11906e97151b040a82125ecb5735c0, type: 3}
 --- !u!1 &1709673746
 GameObject:
   m_ObjectHideFlags: 0
@@ -15389,6 +15852,7 @@ RectTransform:
   m_Children:
   - {fileID: 1910642897}
   - {fileID: 53691325}
+  - {fileID: 1187898859}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -15801,6 +16265,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920194142}
   m_CullTransparentMesh: 1
+--- !u!1 &1938667556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+  m_PrefabInstance: {fileID: 306746767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1938667558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938667556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1520592871}
+  questionPanel: {fileID: 1340539687}
+  questionText: {fileID: 475909612}
+  answerInput: {fileID: 514925188}
+  messageText: {fileID: 440240567}
+  door: {fileID: 306746769}
+  openAngle: -120
+  openSpeed: 2
+  question: 'What is the output of:
+
+    print("Hello")'
+  correctAnswer: Hello
 --- !u!1 &1958071540
 GameObject:
   m_ObjectHideFlags: 0
@@ -16160,7 +16653,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 470357218}
+      - m_Target: {fileID: 625901418}
         m_TargetAssemblyTypeName: DoorQuizInteraction, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -16662,6 +17155,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1362670684717991145, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
   m_PrefabInstance: {fileID: 7798848831052003336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4089299311930171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130701447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1486634809}
+  questionPanel: {fileID: 76790199}
+  questionText: {fileID: 1542129532}
+  answerInput: {fileID: 741479245}
+  messageText: {fileID: 851880608}
+  door: {fileID: 4597036855154969}
+  openAngle: 90
+  openSpeed: 2
+  question: 'Output of :
+
+    print("hello"[1])'
+  correctAnswer: e
 --- !u!4 &4597036855154969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233324555607822022, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
@@ -18469,7 +18986,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 875627232527848481, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4089299311930171}
   m_SourcePrefab: {fileID: 100100000, guid: 55db99524416c8648be1be9fe05df6a3, type: 3}
 --- !u!4 &7818406177127835348
 Transform:
@@ -18811,3 +19331,4 @@ SceneRoots:
   - {fileID: 940746497}
   - {fileID: 1831243708}
   - {fileID: 1151549878}
+  - {fileID: 1278895410}

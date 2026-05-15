@@ -96,7 +96,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1362670684717991145}
   - component: {fileID: 2790781828152036259}
-  - component: {fileID: 234902383898908148}
   m_Layer: 0
   m_Name: Door_1_Milk
   m_TagString: Untagged
@@ -142,30 +141,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 4, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &234902383898908148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875627232527848481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870fccae566ff4642b45e839052c58a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: {fileID: 0}
-  questionPanel: {fileID: 0}
-  questionText: {fileID: 0}
-  answerInput: {fileID: 0}
-  messageText: {fileID: 0}
-  door: {fileID: 8233324555607822022}
-  openAngle: -90
-  openSpeed: 2
-  question: 'What is the output of:
-
-    print(2 + 3)'
-  correctAnswer: 5
 --- !u!1 &1661068844924343349
 GameObject:
   m_ObjectHideFlags: 0
