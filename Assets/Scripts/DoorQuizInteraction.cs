@@ -29,8 +29,14 @@ public class DoorQuizInteraction : MonoBehaviour
 
     private Quaternion openRotation;
 
+    // Door sound
+    private AudioSource audioSource;
+
     void Start()
     {
+        // Get Audio Source
+        audioSource = GetComponent<AudioSource>();
+
         // Hide UI at start
         interactText.SetActive(false);
         questionPanel.SetActive(false);
@@ -39,20 +45,20 @@ public class DoorQuizInteraction : MonoBehaviour
         messageText.text = "";
         answerInput.text = "";
 
-        // Door target rotation
+        // Door open rotation
         openRotation = Quaternion.Euler(
             door.eulerAngles.x,
             door.eulerAngles.y + openAngle,
             door.eulerAngles.z
         );
 
-        // Set question
+        // Set question text
         questionText.text = question;
     }
 
     void Update()
     {
-        // Open question panel with E
+        // Open quiz panel with E
         if (playerNear && !quizOpened && !doorOpened)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -82,7 +88,7 @@ public class DoorQuizInteraction : MonoBehaviour
         // Show question panel
         questionPanel.SetActive(true);
 
-        // Clear old data
+        // Clear old text
         answerInput.text = "";
         messageText.text = "";
 
@@ -98,7 +104,7 @@ public class DoorQuizInteraction : MonoBehaviour
     {
         string answer = answerInput.text.Trim().ToLower();
 
-        // Correct answer
+        // Correct Answer
         if (answer == correctAnswer.ToLower())
         {
             messageText.text = "Correct! Door Opened.";
@@ -106,20 +112,26 @@ public class DoorQuizInteraction : MonoBehaviour
             // Open door
             doorOpened = true;
 
-            // Close panel after 2 sec
+            // Play door sound
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
+
+            // Close panel after 2 seconds
             Invoke(nameof(CloseQuizPanel), 2f);
         }
         else
         {
             messageText.text = "Wrong Answer. Try Again.";
 
-            // Clear input
+            // Clear input field
             answerInput.text = "";
 
             // Focus input again
             answerInput.ActivateInputField();
 
-            // Remove wrong message after 2 sec
+            // Remove wrong message after delay
             CancelInvoke(nameof(ClearMessage));
             Invoke(nameof(ClearMessage), 2f);
         }
@@ -138,7 +150,7 @@ public class DoorQuizInteraction : MonoBehaviour
         // Hide panel
         questionPanel.SetActive(false);
 
-        // Clear everything
+        // Clear UI
         messageText.text = "";
         answerInput.text = "";
 
